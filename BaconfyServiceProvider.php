@@ -4,7 +4,7 @@ namespace Baconfy;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\ServiceProvider;
-use Baconfy\Loaders\ProvidersTrait;
+use Baconfy\Loader\ProvidersTrait;
 
 class BaconfyServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
 use Illuminate\Foundation\AliasLoader;
 

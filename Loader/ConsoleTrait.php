@@ -1,20 +1,16 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
 use File;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Console\Scheduling\Schedule;
 
 trait ConsoleTrait
 {
-    use ReflectionTrait;
-
     /**
      * @param $directory
      * @return void
-     * @throws \ReflectionException
      */
     private function loadModuleCommands($directory)
     {

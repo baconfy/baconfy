@@ -1,19 +1,15 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
 use File;
 use Faker\Generator;
 use Illuminate\Database\Eloquent\Factory;
 
 trait FactoriesTrait
 {
-    use ReflectionTrait;
-
     /**
      * @param $directory
-     * @throws \ReflectionException
      */
     protected function loadModuleFactories($directory)
     {

@@ -1,14 +1,11 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
 use File;
 
 trait ConfigurationTrait
 {
-    use ReflectionTrait;
-
     /**
      * @param $directory
      * @return void

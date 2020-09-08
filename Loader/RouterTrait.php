@@ -1,27 +1,31 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
+use Baconfy\Exception\RouterMapException;
 use File;
 use Illuminate\Contracts\Routing\Registrar;
 use Illuminate\Support\Facades\Route;
 
 trait RouterTrait
 {
-    use ReflectionTrait;
-
+    /**
+     * Map routes for api and web
+     */
     public function map()
     {
-        $this->loadModuleRoutes('Ui/Api/Routes', 'api');
-        $this->loadModuleRoutes('Ui/Web/Routes', 'web');
+        try {
+            $this->loadModuleRoutes('Ui/Api/Routes', 'api');
+            $this->loadModuleRoutes('Ui/Web/Routes', 'web');
+        } catch (\ReflectionException $e) {
+            throw new RouterMapException;
+        }
     }
 
     /**
      * @param string $directory
      * @param string $type
      * @return void
-     * @throws \ReflectionException
      */
     private function loadModuleRoutes(string $directory, string $type)
     {

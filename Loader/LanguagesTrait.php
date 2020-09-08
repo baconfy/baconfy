@@ -1,18 +1,14 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
 use File;
 
 trait LanguagesTrait
 {
-    use ReflectionTrait;
-
     /**
      * @param $directory
      * @return void
-     * @throws \ReflectionException
      */
     protected function loadModuleLanguages($directory)
     {

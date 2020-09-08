@@ -1,17 +1,13 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
-use Baconfy\Traits\ReflectionTrait;
 use File;
 
 trait MigrationsTrait
 {
-    use ReflectionTrait;
-
     /**
      * @param $directory
-     * @throws \ReflectionException
      */
     protected function loadModuleMigrations($directory)
     {

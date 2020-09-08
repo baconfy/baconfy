@@ -1,12 +1,12 @@
 <?php
 
-namespace Baconfy\Loaders;
+namespace Baconfy\Loader;
 
 use Baconfy\Traits\ReflectionTrait;
 
 trait Autoload
 {
-    use AliasesTrait, ConfigurationTrait, ConsoleTrait,
+    use ReflectionTrait, AliasesTrait, ConfigurationTrait, ConsoleTrait,
         FactoriesTrait, LanguagesTrait, MigrationsTrait,
         ProvidersTrait, RouterTrait, ViewsTrait;
 

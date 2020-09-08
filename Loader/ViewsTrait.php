@@ -1,17 +1,12 @@
 <?php
 
-namespace Baconfy\Loaders;
-
-use Baconfy\Traits\ReflectionTrait;
+namespace Baconfy\Loader;
 
 trait ViewsTrait
 {
-    use ReflectionTrait;
-
     /**
      * Load view from container path
      * @param $directory
-     * @throws \ReflectionException
      */
     protected function loadModuleViews($directory)
     {
