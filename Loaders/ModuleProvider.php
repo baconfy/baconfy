@@ -2,7 +2,6 @@
 
 namespace Baconfy\Loaders;
 
-use Baconfy\Loader\Autoload;
 use Illuminate\Support\ServiceProvider;
 
 class ModuleProvider extends ServiceProvider
@@ -13,6 +12,7 @@ class ModuleProvider extends ServiceProvider
      * Bootstrap any application services.
      *
      * @return void
+     * @throws \ReflectionException
      */
     public function boot()
     {
